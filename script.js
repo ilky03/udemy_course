@@ -1,4 +1,4 @@
-
+'use strict';
 
 let personalMovieDB = {
     count: 0,
@@ -65,7 +65,9 @@ let personalMovieDB = {
         });
     },
     toggleVisibleMyDB: function() {
-        (personalMovieDB.privat) ? personalMovieDB.privat = false : personalMovieDB.privat = true;
+        if (personalMovieDB.privat) {
+            personalMovieDB.privat = false;
+        } else { personalMovieDB.privat = true; }
     },
     
 };
